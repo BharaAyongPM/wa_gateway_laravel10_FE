@@ -51,7 +51,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link {{ request()->is('admin/log*') ? 'active bg-gradient-success text-primary' : '' }}"
-                href="/admin/log">
+                href="/log">
                 <i class="menu-icon mdi mdi-tools"></i>
                 <span class="menu-title">DATA LOG SERVER</span>
             </a>
