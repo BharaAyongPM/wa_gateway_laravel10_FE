@@ -12,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(AutoReplySeeder::class);
+        $this->call(PlanSeeder::class,);
     }
 }

@@ -30,5 +30,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'wa' => [
+        'base' => env('WA_API_BASE', 'http://localhost:5000'),
+        'token'    => env('WA_API_TOKEN'),
+    ],
 
 ];
