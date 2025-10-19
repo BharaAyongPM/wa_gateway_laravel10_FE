@@ -2,9 +2,6 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AutoReplyController;
-use App\Http\Controllers\BroadcastController;
-use App\Http\Controllers\DeviceController;
-use App\Http\Controllers\N8nCallbackController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,11 +23,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/trigger-auto-reply', [AutoReplyController::class, 'handle']);
 Route::middleware(['verify.apikey'])->post('/wa/send', [AutoReplyController::class, 'send']);
-Route::get('/broadcasts', [BroadcastController::class, 'api']);
-Route::get('/broadcasts-for-go', [AdminController::class, 'apiBroadcastsForGo']);
-
-Route::post('/wa/send-from-external', [DeviceController::class, 'sendFromExternal']);
-Route::post('/wa/send-media-external', [DeviceController::class, 'sendMediaFromExternal']);
-
-Route::post('/wa/webhook', [DeviceController::class, 'webhook']);
-Route::post('/wa/n8n/callback', [N8nCallbackController::class, 'handle']);
