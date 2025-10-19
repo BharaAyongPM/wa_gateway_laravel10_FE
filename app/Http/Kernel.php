@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         // app/Http/Kernel.php
         'verify.apikey' => \App\Http\Middleware\VerifyApiKey::class,
+        'admin' => \App\Http\Middleware\AdminOnly::class,
 
     ];
 }
